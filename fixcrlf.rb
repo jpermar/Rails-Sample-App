@@ -26,7 +26,7 @@ end
 
 #$files = [ '.gitignore', 'Gemfile.lock', 'README', 'Rakefile', 'config.ru', 'README_FOR_APP', 'robots.txt', 'rails', '.rspec' ]
 
-$files = [ 'readme.txt' ] 
+$files = [ 'layout_links_spec.rb' ] 
 
 #$extensions = [ '.rb', '.html', '.erb', '.yml', '.js', '.css' ]
 
