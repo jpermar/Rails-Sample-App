@@ -26,10 +26,10 @@ end
 
 #$files = [ '.gitignore', 'Gemfile.lock', 'README', 'Rakefile', 'config.ru', 'README_FOR_APP', 'robots.txt', 'rails', '.rspec' ]
 
-$files = [ 'layout_links_spec.rb' ] 
+$files = [ ] 
 
 #$extensions = [ '.rb', '.html', '.erb', '.yml', '.js', '.css' ]
 
-$extensions = [ ]
+$extensions = [ '.rb' ]
 
 list(".")
