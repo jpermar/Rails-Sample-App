@@ -115,23 +115,44 @@ describe User do
         @user.has_password?("invalid").should be_false
       end
     end
-    
+
     describe "authenticate method" do
-      
+
       it "should return nil on email/password mismatch" do
         wrong_password_user = User.authenticate(@attr[:email], "wrongpass")
         wrong_password_user.should be_nil
       end
-      
+
       it "should return nil for an email address with no user" do
         no_user = User.authenticate("missinguser", @attr[:password])
         no_user.should be_nil
       end
-      
+
       it "should return user on correct email/password" do
         found_user = User.authenticate(@attr[:email], @attr[:password])
         found_user.should == @user
       end
     end
   end
+
+  describe "admin attribute" do
+
+    before(:each) do
+      @user = User.create!(@attr)
+    end
+    
+    it "should respond to admin" do
+      @user.should respond_to(:admin)
+    end
+    
+    it "should not be set admin by default" do
+      @user.should_not be_admin
+    end
+    
+    it "should be convertible to an admin" do
+      @user.toggle!(:admin)
+      @user.should be_admin
+    end
+  end
+
 end
