@@ -21,7 +21,7 @@ describe "Users" do
     end
 
     describe "success" do
-      it "sohuld make a new user" do
+      it "should make a new user" do
         lambda do
           visit signup_path
           fill_in :user_name,                   :with => "Foo"
@@ -60,4 +60,5 @@ describe "Users" do
       end
     end
   end
+  
 end
