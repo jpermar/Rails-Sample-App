@@ -6,7 +6,10 @@
 		<%= render 'shared/micropost_form' %>
 		<%= render 'shared/feed'%>
 		</td>
-		<td class="sidebar round"><%= render 'shared/user_info' %></td>
+		<td class="sidebar round">
+			<%= render 'shared/user_info' %>
+			<%= render 'shared/stats' %>
+		</td>
 	</tr>
 </table>
 <% else %>
