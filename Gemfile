@@ -6,6 +6,7 @@ gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'will_paginate', '3.0.pre2'
 gem 'faker', '0.3.1' #not used in production (obviously), but needs to be here so
 #that loading the sample_data.rake won't fail when migrating heroku
+gem 'rake', '0.8.7'
 
 group :development do
   gem 'rspec-rails', '2.5.0'
